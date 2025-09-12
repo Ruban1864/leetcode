@@ -1,19 +1,17 @@
 class Solution {
     public boolean sumOfNumberAndReverse(int num) {
         for(int x = 0 ; x <= num ; x++){
-            int rev = reverse(x);
+            int rev = 0, temp = x;
+            while (temp > 0) {
+                rev = rev * 10 + temp % 10;
+                temp /= 10;
+            }
             if(x + rev == num){
                 return true;
             }
         }
         return false;
     }
-    private int reverse(int num ){
-        int rev = 0;
-        while( num > 0){
-            rev = rev * 10 + (num % 10);
-            num /= 10;
-        }
-        return rev;
-    }
 }
+
+
