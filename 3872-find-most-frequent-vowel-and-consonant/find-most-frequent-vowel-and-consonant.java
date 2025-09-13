@@ -2,7 +2,7 @@ class Solution {
     public int maxFreqSum(String s) {
         Map<Character,Integer> vowel = new HashMap<>();
         Map<Character,Integer> consoanant = new HashMap<>();
-        String vowels = "AEIOUaeiou";
+        String vowels = "aeiou";
         for(char ch : s.toCharArray()){
             if(vowels.indexOf(ch) !=-1){
                 vowel.put(ch , vowel.getOrDefault(ch,0)+1);
